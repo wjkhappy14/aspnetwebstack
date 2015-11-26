@@ -57,8 +57,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Web.Http.Cors", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AspNet.Facebook", "src\Microsoft.AspNet.Facebook\Microsoft.AspNet.Facebook.csproj", "{821A136C-7C6F-44C6-A9E6-C39B5BFB1483}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExchange.Redis", "..\StackExchange.Redis\StackExchange.Redis\StackExchange.Redis.csproj", "{7CEC07F2-8C03-4C42-B048-738B215824C1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wintellect.PowerCollections", "src\PowerCollections\Wintellect.PowerCollections.csproj", "{5821977D-AC2C-4912-BCD0-6E6B1A756167}"
 EndProject
 Global
@@ -394,20 +392,6 @@ Global
 		{821A136C-7C6F-44C6-A9E6-C39B5BFB1483}.ReleaseSigned|Any CPU.Build.0 = Release|Any CPU
 		{821A136C-7C6F-44C6-A9E6-C39B5BFB1483}.Verbose|Any CPU.ActiveCfg = Release|Any CPU
 		{821A136C-7C6F-44C6-A9E6-C39B5BFB1483}.Verbose|Any CPU.Build.0 = Release|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.CodeAnalysis|Any CPU.ActiveCfg = Mono|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.CodeAnalysis|Any CPU.Build.0 = Mono|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.Log Output|Any CPU.ActiveCfg = Log Output|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.Log Output|Any CPU.Build.0 = Log Output|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.Mono|Any CPU.ActiveCfg = Mono|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.Mono|Any CPU.Build.0 = Mono|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.ReleaseSigned|Any CPU.ActiveCfg = Release|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.ReleaseSigned|Any CPU.Build.0 = Release|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.Verbose|Any CPU.ActiveCfg = Verbose|Any CPU
-		{7CEC07F2-8C03-4C42-B048-738B215824C1}.Verbose|Any CPU.Build.0 = Verbose|Any CPU
 		{5821977D-AC2C-4912-BCD0-6E6B1A756167}.CodeAnalysis|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
 		{5821977D-AC2C-4912-BCD0-6E6B1A756167}.CodeAnalysis|Any CPU.Build.0 = ReleaseSigned|Any CPU
 		{5821977D-AC2C-4912-BCD0-6E6B1A756167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

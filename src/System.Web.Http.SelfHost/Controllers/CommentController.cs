@@ -13,20 +13,14 @@ namespace System.Web.Http.SelfHost.Controllers
 {
 
 
-    [EnableCors(origins="")]
+    [EnableCors(origins: "*", headers: "Name=Angkor", methods: "POST")]
     [WwwAuthorize]
     public class CommentController : ApiController
     {
-
-
         public CommentController()
         {
 
-
         }
-
-
-
 
         [HttpGet]
         public IHttpActionResult Partition()
