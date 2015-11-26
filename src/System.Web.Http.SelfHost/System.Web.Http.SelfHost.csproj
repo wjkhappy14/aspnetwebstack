@@ -70,6 +70,7 @@
     <Compile Include="..\Common\TaskHelpersExtensions.cs">
       <Link>Common\TaskHelpersExtensions.cs</Link>
     </Compile>
+    <Compile Include="Authentications\WwwAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AlgorithmsController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CommentController.cs" />
@@ -169,6 +170,10 @@
     <ProjectReference Include="..\System.Web.Cors\System.Web.Cors.csproj">
       <Project>{43c1b979-d593-4a32-bb3a-4316f1c66d66}</Project>
       <Name>System.Web.Cors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Http.Cors\System.Web.Http.Cors.csproj">
+      <Project>{25def6f6-7f99-4eb7-91ed-5181a346afe1}</Project>
+      <Name>System.Web.Http.Cors</Name>
     </ProjectReference>
     <ProjectReference Include="..\System.Web.Http\System.Web.Http.csproj">
       <Project>{DDC1CE0C-486E-4E35-BB3B-EAB61F8F9440}</Project>
