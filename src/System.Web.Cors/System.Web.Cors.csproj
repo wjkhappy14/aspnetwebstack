@@ -32,6 +32,7 @@
     <Compile Include="CorsEngine.cs" />
     <Compile Include="CorsRequestContext.cs" />
     <Compile Include="CorsResult.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\SRResources.Designer.cs">
       <DependentUpon>SRResources.resx</DependentUpon>

@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System.Collections.Concurrent;
+
+
+namespace System.Web.Http.SelfHost.Controllers
+{
+
+    /// <summary>
+    /// http://www.geeksforgeeks.org
+    /// </summary>
+    public class ConcurrentController : ApiController
+    {
+        private readonly ConcurrentBag<double> bag = new ConcurrentBag<double>();
+        public ConcurrentController()
+        {
+            this.Initialize();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        private void Initialize()
+        {
+            Parallel.For(1, 10000, (index, state) =>
+            {
+                bag.Add(index * Math.Log(index));
+
+            });
+        }
+        [HttpGet]
+        public IHttpActionResult Bag()
+        {
+            return Json(bag);
+        }
+
+
+        public IEnumerator<double> Enumerable()
+        {
+            return bag.GetEnumerator();
+        }
+    }
+}
