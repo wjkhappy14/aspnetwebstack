@@ -36,6 +36,11 @@ namespace WebMatrix.Data
             _connectionFactory = connectionFactory;
         }
 
+
+
+        /// <summary>
+        /// 添加移除事件
+        /// </summary>
         public static event EventHandler<ConnectionEventArgs> ConnectionOpened
         {
             add { _connectionOpened += value; }

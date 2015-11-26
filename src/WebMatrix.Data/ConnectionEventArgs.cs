@@ -5,6 +5,11 @@ using System.Data.Common;
 
 namespace WebMatrix.Data
 {
+
+
+    /// <summary>
+    /// 定义数据库连接事件参数
+    /// </summary>
     public class ConnectionEventArgs : EventArgs
     {
         public ConnectionEventArgs(DbConnection connection)

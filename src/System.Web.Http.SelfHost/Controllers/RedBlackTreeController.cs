@@ -32,7 +32,6 @@ namespace System.Web.Http.SelfHost.Controllers
         [HttpGet]
         public IHttpActionResult Sum()
         {
-            redblackTree.Validate();
             return Json(new { Sum = redblackTree.Sum() });
         }
         [HttpGet]
