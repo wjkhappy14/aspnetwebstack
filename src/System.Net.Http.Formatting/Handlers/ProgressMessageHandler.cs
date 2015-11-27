@@ -19,7 +19,12 @@ namespace System.Net.Http.Handlers
         /// </summary>
         public ProgressMessageHandler()
         {
+            HttpReceiveProgress += (sender,args) => {
+                System.Diagnostics.Debug.WriteLine(args.BytesTransferred);
+            };
         }
+
+     
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ProgressMessageHandler"/> class.

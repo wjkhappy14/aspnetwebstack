@@ -19,6 +19,8 @@ namespace System.Web.Helpers
         internal static byte[] GenerateSaltInternal(int byteLength = SaltSize)
         {
             byte[] buf = new byte[byteLength];
+
+            //使用加密服务提供程序 (CSP) 提供的实现来实现加密随机数生成器 (RNG)。
             using (var rng = new RNGCryptoServiceProvider())
             {
                 rng.GetBytes(buf);

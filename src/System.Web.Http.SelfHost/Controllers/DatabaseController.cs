@@ -27,10 +27,14 @@ namespace System.Web.Http.SelfHost.Controllers
         }
 
 
+
         [HttpGet]
 
         public IHttpActionResult Query(string cmd)
         {
+            
+        
+
             cmd = "Select   GetDate() as TimeNow";
             var data = Db.Query(cmd);
             return Json(data);

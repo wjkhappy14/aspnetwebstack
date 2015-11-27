@@ -77,6 +77,7 @@
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\ConcurrentController.cs" />
+    <Compile Include="Controllers\CryptographyController.cs" />
     <Compile Include="Controllers\DatabaseController.cs" />
     <Compile Include="Controllers\DelegateController.cs" />
     <Compile Include="Controllers\EventHandlerController.cs" />
@@ -87,12 +88,14 @@
     <Compile Include="Controllers\ParallelSortController.cs" />
     <Compile Include="Controllers\PLinqController.cs" />
     <Compile Include="Controllers\RedBlackTreeController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Controllers\SemaphoreController.cs" />
     <Compile Include="Controllers\TaskController.cs" />
     <Compile Include="Controllers\ThreadingController.cs" />
     <Compile Include="Controllers\unsafeController.cs" />
     <Compile Include="Controllers\WaitHandleController.cs" />
     <Compile Include="Delegates\StringProcessor.cs" />
+    <Compile Include="DelegatingHandlers\SessionIdHandler.cs" />
     <Compile Include="Documents\JsonDocumentationProvider.cs" />
     <Compile Include="HttpRequestMessageExtensions.cs" />
     <Compile Include="LazyValue.cs" />
@@ -177,6 +180,10 @@
     <ProjectReference Include="..\System.Web.Http.Cors\System.Web.Http.Cors.csproj">
       <Project>{25def6f6-7f99-4eb7-91ed-5181a346afe1}</Project>
       <Name>System.Web.Http.Cors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Http.Owin\System.Web.Http.Owin.csproj">
+      <Project>{66dd7cd7-c68f-4d0e-9f3d-3b58c49d1467}</Project>
+      <Name>System.Web.Http.Owin</Name>
     </ProjectReference>
     <ProjectReference Include="..\System.Web.Http\System.Web.Http.csproj">
       <Project>{DDC1CE0C-486E-4E35-BB3B-EAB61F8F9440}</Project>

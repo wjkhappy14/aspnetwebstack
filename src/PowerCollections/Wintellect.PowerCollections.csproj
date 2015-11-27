@@ -93,6 +93,7 @@
     <Compile Include="BasicAlgorithms\Common.cs" />
     <Compile Include="BasicAlgorithms\Selection.cs" />
     <Compile Include="BasicSort.cs" />
+    <Compile Include="Cryptographys\CommonCrypto.cs" />
     <Compile Include="InterlockedInt32.cs" />
     <Compile Include="LinqExtensions.cs" />
     <Compile Include="Node.cs" />
