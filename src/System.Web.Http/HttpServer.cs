@@ -173,6 +173,10 @@ namespace System.Web.Http
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Justification = "we are converting exceptions to error responses.")]
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
+
+            System.Diagnostics.Trace.WriteLine("SendAsync from [HttpServer]");
+
+
             if (request == null)
             {
                 throw Error.ArgumentNull("request");

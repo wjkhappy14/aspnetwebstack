@@ -26,6 +26,9 @@ namespace System.Web.Mvc.Async
         {
             _syncContext = syncContext ?? SynchronizationContextUtil.GetSynchronizationContext();
 
+
+
+            //初始化 操作计数器
             OutstandingOperations = new OperationCounter();
             OutstandingOperations.Completed += delegate
             {

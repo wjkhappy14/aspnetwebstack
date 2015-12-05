@@ -15,6 +15,7 @@ namespace System.Web.Http.SelfHost.Models
         public int Count { get; set; }
         public TimeSpan Elapsed { get; set; }
         public T[] Array { get; set; }
+        //public T this[int index] { get; set; }
 
     }
 }

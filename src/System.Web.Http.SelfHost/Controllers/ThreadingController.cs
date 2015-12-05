@@ -9,6 +9,13 @@ using Wintellect.PowerCollections;
 
 namespace System.Web.Http.SelfHost.Controllers
 {
+
+
+
+
+    /// <summary>
+    /// Threading in C#  http://www.albahari.com/threading/
+    /// </summary>
     public class ThreadingController : ApiController
     {
 

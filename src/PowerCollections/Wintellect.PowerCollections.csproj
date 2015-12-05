@@ -93,6 +93,10 @@
     <Compile Include="BasicAlgorithms\Common.cs" />
     <Compile Include="BasicAlgorithms\Selection.cs" />
     <Compile Include="BasicSort.cs" />
+    <Compile Include="BTree\BTree.cs" />
+    <Compile Include="BTree\Entry.cs" />
+    <Compile Include="BTree\Node.cs" />
+    <Compile Include="BTree\SingleBTree.cs" />
     <Compile Include="Cryptographys\CommonCrypto.cs" />
     <Compile Include="InterlockedInt32.cs" />
     <Compile Include="LinqExtensions.cs" />
@@ -142,6 +146,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Introduction to Algorithms.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
 </Project>

@@ -14,7 +14,7 @@ namespace Wintellect.PowerCollections
     /// <summary>
     /// A collection of methods to create IComparer and IEqualityComparer instances in various ways.
     /// </summary>
-    internal static class Comparers
+    public static class Comparers
     {
         /// <summary>
         /// Class to change an IEqualityComparer&lt;TKey&gt; to an IEqualityComparer&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; 

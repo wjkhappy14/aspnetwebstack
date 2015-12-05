@@ -5,9 +5,11 @@ using System.Net.Http;
 using System.Net.Http.Handlers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http.Batch;
 using System.Web.Http.Dispatcher;
 using System.Web.Http.Owin;
 using System.Web.Http.Routing;
+using System.Web.Http.SelfHost.Schedulers;
 
 namespace System.Web.Http.SelfHost
 {
@@ -19,7 +21,7 @@ namespace System.Web.Http.SelfHost
 
             var baseAddress = "http://localhost:8080";
             HttpSelfHostConfiguration config = new HttpSelfHostConfiguration(baseAddress);
-            config.MessageHandlers.Add(new ProgressMessageHandler() { });
+           // config.MessageHandlers.Add(new ProgressMessageHandler() { });
 
 
             // Web API 路由
@@ -47,6 +49,12 @@ namespace System.Web.Http.SelfHost
                 );
             HttpSelfHostServer server = new HttpSelfHostServer(config);
             server.OpenAsync();
+
+
+            TaskManager.Instance.Initialize();
+            TaskManager.Instance.Start();
+           DefaultHttpBatchHandler batchHandler = new DefaultHttpBatchHandler(server);
+
             Console.WriteLine("Server  http://localhost:8080   Open now ....at {0}..", server.Configuration.VirtualPathRoot);
             config.EnsureInitialized();
             foreach (var route in config.Routes)

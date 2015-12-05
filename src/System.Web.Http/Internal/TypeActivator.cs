@@ -5,6 +5,10 @@ using System.Linq.Expressions;
 
 namespace System.Web.Http.Internal
 {
+
+    /// <summary>
+    /// 通过 Expression  给指定的类型创建实例
+    /// </summary>
     internal static class TypeActivator
     {
         public static Func<TBase> Create<TBase>(Type instanceType) where TBase : class

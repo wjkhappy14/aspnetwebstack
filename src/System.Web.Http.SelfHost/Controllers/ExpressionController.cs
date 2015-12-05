@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http.SelfHost.Expressions;
 using Wintellect.PowerCollections;
 
 namespace System.Web.Http.SelfHost.Controllers
@@ -23,6 +24,8 @@ namespace System.Web.Http.SelfHost.Controllers
 
 
 
+
+        [HttpGet]
         public IHttpActionResult Block()
         {
 
@@ -43,6 +46,18 @@ namespace System.Web.Http.SelfHost.Controllers
 
 
             return Json("");
+
+        }
+
+
+
+        [HttpGet]
+        public IHttpActionResult CreateInstance()
+        {
+
+            var func = MyTypeActivator.Create<String>(typeof(System.DateTime));
+            func.Invoke();
+            return Json(func);
 
         }
 

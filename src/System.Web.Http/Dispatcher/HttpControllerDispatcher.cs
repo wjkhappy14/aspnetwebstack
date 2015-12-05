@@ -105,6 +105,7 @@ namespace System.Web.Http.Dispatcher
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Justification = "We report the error in the HTTP response.")]
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
+            System.Diagnostics.Trace.WriteLine("SendAsync from [HttpControllerDispatcher]");
             if (request == null)
             {
                 throw Error.ArgumentNull("request");

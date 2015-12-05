@@ -11,6 +11,11 @@ namespace System.Web.Mvc.Async
 
     // This class is thread-safe.
 
+
+        /// <summary>
+        /// 触发器 侦听 
+        /// </summary>
+
     internal sealed class TriggerListener
     {
         private readonly Trigger _activateTrigger;
@@ -27,6 +32,9 @@ namespace System.Web.Mvc.Async
 
         public void Activate()
         {
+
+
+            //触发器  执行
             _activateTrigger.Fire();
         }
 

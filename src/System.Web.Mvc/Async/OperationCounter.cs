@@ -4,10 +4,21 @@ using System.Threading;
 
 namespace System.Web.Mvc.Async
 {
+
+
+
+    /// <summary>
+    /// 操作计数器
+    /// </summary>
     public sealed class OperationCounter
     {
         private int _count;
 
+
+
+        /// <summary>
+        /// 定义完成事件
+        /// </summary>
         public event EventHandler Completed;
 
         public int Count
@@ -46,8 +57,17 @@ namespace System.Web.Mvc.Async
             return AddAndExecuteCallbackIfCompleted(value);
         }
 
+
+
+
+
+        /// <summary>
+        /// 在完成的时候调用该事件
+        /// </summary>
+
         private void OnCompleted()
         {
+            System.Diagnostics.Debug.WriteLine("OperationCounter ->OnCompleted:"+this.Count);
             EventHandler handler = Completed;
             if (handler != null)
             {

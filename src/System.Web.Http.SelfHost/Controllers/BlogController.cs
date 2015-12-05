@@ -21,7 +21,9 @@ namespace System.Web.Http.SelfHost.Controllers
 
         public BlogController()
         {
+
             
+
         }
 
         [HttpGet]
@@ -66,6 +68,8 @@ namespace System.Web.Http.SelfHost.Controllers
         }
 
 
+
+        [HttpGet]
         public async Task<HttpResponseMessage> PostFormData()
         {
             // Check if the request contains multipart/form-data.

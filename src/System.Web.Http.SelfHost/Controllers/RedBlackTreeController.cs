@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http.SelfHost.WebMatrix;
 using Wintellect.PowerCollections;
 
 namespace System.Web.Http.SelfHost.Controllers
@@ -11,6 +12,9 @@ namespace System.Web.Http.SelfHost.Controllers
     {
 
         RedBlackTree<double> redblackTree = new RedBlackTree<double>(Comparer<double>.Default);
+
+        DynamicDataReader reader = new DynamicDataReader();
+
 
         public RedBlackTreeController()
         {
@@ -65,6 +69,27 @@ namespace System.Web.Http.SelfHost.Controllers
         public Node<double> Nodes()
         {
             return redblackTree.Root;
+        }
+
+
+
+        public IHttpActionResult PostData()
+        {
+
+
+            var nodelist= redblackTree.ToList();
+
+           var db=  reader.GetDB();
+
+            foreach (var node in nodelist)
+            {
+                String cmdText = String.Format("",node);
+                db.Execute(cmdText);
+            }
+
+
+
+
         }
     }
 }

@@ -43,7 +43,11 @@
     <OutputPath>bin\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\..\packages\Microsoft.AspNet.SignalR.Core.1.0.0\lib\net40\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -75,6 +79,7 @@
     <Compile Include="Authentications\WwwAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AlgorithmsController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\BTreeController.cs" />
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\ConcurrentController.cs" />
     <Compile Include="Controllers\CryptographyController.cs" />
@@ -82,6 +87,8 @@
     <Compile Include="Controllers\DelegateController.cs" />
     <Compile Include="Controllers\EventHandlerController.cs" />
     <Compile Include="Controllers\ExpressionController.cs" />
+    <Compile Include="Controllers\HttpBindingController.cs" />
+    <Compile Include="Controllers\HubController.cs" />
     <Compile Include="Controllers\IOController.cs" />
     <Compile Include="Controllers\OrderedSetController.cs" />
     <Compile Include="Controllers\ParallelController.cs" />
@@ -92,16 +99,36 @@
     <Compile Include="Controllers\SemaphoreController.cs" />
     <Compile Include="Controllers\TaskController.cs" />
     <Compile Include="Controllers\ThreadingController.cs" />
+    <Compile Include="Controllers\TopicController.cs" />
     <Compile Include="Controllers\unsafeController.cs" />
     <Compile Include="Controllers\WaitHandleController.cs" />
     <Compile Include="Delegates\StringProcessor.cs" />
     <Compile Include="DelegatingHandlers\SessionIdHandler.cs" />
     <Compile Include="Documents\JsonDocumentationProvider.cs" />
+    <Compile Include="Events\CommandResult.cs" />
+    <Compile Include="Events\EntityDeleted.cs" />
+    <Compile Include="Events\EntityInserted.cs" />
+    <Compile Include="Events\EntityUpdated.cs" />
+    <Compile Include="Events\NotificationEventArgs.cs" />
+    <Compile Include="Events\SendNotification.cs" />
+    <Compile Include="Expressions\MyTypeActivator.cs" />
     <Compile Include="HttpRequestMessageExtensions.cs" />
     <Compile Include="LazyValue.cs" />
+    <Compile Include="Logs\ILogger.cs" />
+    <Compile Include="Logs\Log.cs" />
+    <Compile Include="Logs\LoggingExtensions.cs" />
+    <Compile Include="Logs\LogLevel.cs" />
+    <Compile Include="Logs\NullLogger.cs" />
+    <Compile Include="Logs\RunningLog.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\CommentAdd.cs" />
+    <Compile Include="Models\IPagedList.cs" />
+    <Compile Include="Models\ObjectIdentity.cs" />
+    <Compile Include="Models\PagedList.cs" />
+    <Compile Include="Models\PageResult.cs" />
     <Compile Include="Models\SortInfo.cs" />
+    <Compile Include="Models\Topic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\SRResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,6 +148,14 @@
     <Compile Include="Channels\HttpBindingSecurityModeHelper.cs" />
     <Compile Include="HttpSelfHostConfiguration.cs" />
     <Compile Include="HttpSelfHostServer.cs" />
+    <Compile Include="Schedulers\IScheduleTaskService.cs" />
+    <Compile Include="Schedulers\ITask.cs" />
+    <Compile Include="Schedulers\ScheduleTask.cs" />
+    <Compile Include="Schedulers\ScheduleTaskService.cs" />
+    <Compile Include="Schedulers\Task.cs" />
+    <Compile Include="Schedulers\TaskLog.cs" />
+    <Compile Include="Schedulers\TaskManager.cs" />
+    <Compile Include="Schedulers\TaskThread.cs" />
     <Compile Include="SelfHostHttpRequestContext.cs" />
     <Compile Include="ServiceModel\Channels\AsyncResult.cs" />
     <Compile Include="ServiceModel\Channels\BufferedOutputStream.cs" />
@@ -142,6 +177,16 @@
     <Compile Include="ServiceModel\TransferModeHelper.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignalRHubs\MyHub.cs" />
+    <Compile Include="Singletons\LazySingleton.cs" />
+    <Compile Include="Singletons\MySingleton.cs" />
+    <Compile Include="Singletons\SingletonList.cs" />
+    <Compile Include="Singletons\SingletonOfT.cs" />
+    <Compile Include="Singletons\SingletonTree.cs" />
+    <Compile Include="Streams\VideoStream.cs" />
+    <Compile Include="Trees\BTreeTest.cs" />
+    <Compile Include="Trees\TreeValidation.cs" />
+    <Compile Include="WebMatrix\DynamicDataReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Common\CommonWebApiResources.Designer.cs">
@@ -185,6 +230,10 @@
       <Project>{66dd7cd7-c68f-4d0e-9f3d-3b58c49d1467}</Project>
       <Name>System.Web.Http.Owin</Name>
     </ProjectReference>
+    <ProjectReference Include="..\System.Web.Http.SignalR\System.Web.Http.SignalR.csproj">
+      <Project>{8a607ac9-e7dd-4b74-a0b1-47fc95b9838b}</Project>
+      <Name>System.Web.Http.SignalR</Name>
+    </ProjectReference>
     <ProjectReference Include="..\System.Web.Http\System.Web.Http.csproj">
       <Project>{DDC1CE0C-486E-4E35-BB3B-EAB61F8F9440}</Project>
       <Name>System.Web.Http</Name>
@@ -220,5 +269,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

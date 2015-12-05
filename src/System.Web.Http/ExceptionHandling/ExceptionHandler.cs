@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 
 using System.Diagnostics.Contracts;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.Properties;
@@ -43,6 +44,14 @@ namespace System.Web.Http.ExceptionHandling
         /// <param name="context">The exception handler context.</param>
         public virtual void Handle(ExceptionHandlerContext context)
         {
+
+            var dir = System.Environment.CurrentDirectory;
+            var logPath = System.IO.Directory.CreateDirectory(System.IO.Path.Combine(dir, "Logs"));
+            using (var streamWriter = File.CreateText(string.Format("{0}/{1}.txt", logPath, DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss"))))
+            {
+                string logContent = String.Format("RequestUri={0} ExceptionMessage={1}", context.Request.RequestUri.ToString(), context.Exception.Message);
+                streamWriter.WriteLine(logContent);
+            }
         }
 
         /// <summary>Determines whether the exception should be handled.</summary>

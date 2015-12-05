@@ -8,7 +8,7 @@ namespace System.Web.Http.Batch
     public enum BatchExecutionOrder
     {
         /// <summary>
-        /// Executes the batch requests sequentially.
+        /// Executes the batch requests 顺序的sequentially.
         /// </summary>
         Sequential = 0,
 

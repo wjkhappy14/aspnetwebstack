@@ -4,6 +4,11 @@ using System.Threading;
 
 namespace System.Web.Mvc.Async
 {
+
+
+    /// <summary>
+    /// 封装异步处理结果
+    /// </summary>
     internal sealed class SimpleAsyncResult : IAsyncResult
     {
         private readonly object _asyncState;
@@ -36,6 +41,13 @@ namespace System.Web.Mvc.Async
             get { return _isCompleted; }
         }
 
+
+
+        /// <summary>
+        /// 处理异步完成 
+        /// </summary>
+        /// <param name="completedSynchronously"></param>
+        /// <param name="callback"></param>
         // Proper order of execution:
         // 1. Set the CompletedSynchronously property to the correct value
         // 2. Set the IsCompleted flag

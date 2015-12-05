@@ -14,12 +14,12 @@ namespace System.Web.Http.SelfHost.Controllers
 
 
     [EnableCors(origins: "*", headers: "Name=Angkor", methods: "POST")]
-    [WwwAuthorize]
+    // [WwwAuthorize]
     public class CommentController : ApiController
     {
         public CommentController()
         {
-            
+
         }
 
         [HttpGet]
@@ -35,6 +35,11 @@ namespace System.Web.Http.SelfHost.Controllers
         [HttpGet]
         public IHttpActionResult Add(string title)
         {
+            if (!ModelState.IsValid)
+            {
+
+            }
+
             Comment comment = new Comment();
             //  comment.CommentAdd += Comment_CommentAdd;
             comment.Title = title ?? string.Empty;

@@ -78,6 +78,8 @@ namespace System.Web.Http.WebHost
         /// <param name="handler">The message handler to dispatch requests to.</param>
         public HttpControllerHandler(RouteData routeData, HttpMessageHandler handler)
         {
+
+            System.Diagnostics.Debug.WriteLine("HttpControllerHandler ");
             if (routeData == null)
             {
                 throw Error.ArgumentNull("routeData");

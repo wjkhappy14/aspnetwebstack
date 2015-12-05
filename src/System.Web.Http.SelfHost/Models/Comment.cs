@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using Wintellect.PowerCollections;
 
 namespace System.Web.Http.SelfHost.Models
 {
@@ -13,10 +16,9 @@ namespace System.Web.Http.SelfHost.Models
 
         public Comment()
         {
-
-
+            CommentTree = new RedBlackTree<Comment>(Comparer<Comment>.Default);
+            // CommentTree.Root = new Node<Comment>() { Item = this }; ;
         }
-
         private Guid _id = Guid.NewGuid();
 
         /// <summary>
@@ -56,11 +58,22 @@ namespace System.Web.Http.SelfHost.Models
         }
 
         public Guid Id { get { return _id; } private set { _id = Guid.NewGuid(); } }
+
+
+
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Title 　是必须的")]
         public string Title { get; set; }
         public DateTime CreatedTime
         {
             get { return DateTime.Now; }
             private set { value = DateTime.Now; }
         }
+
+
+        /// <summary>
+        /// 评论树
+        /// </summary>
+        public RedBlackTree<Comment> CommentTree { get; }
+
     }
 }

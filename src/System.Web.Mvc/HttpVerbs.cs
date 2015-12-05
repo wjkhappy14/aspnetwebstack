@@ -2,6 +2,11 @@
 
 namespace System.Web.Mvc
 {
+
+
+    /// <summary>
+    ///  定义 Http 请求处理方式
+    /// </summary>
     [Flags]
     public enum HttpVerbs
     {

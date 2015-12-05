@@ -78,6 +78,9 @@ namespace System.Web.Http.Routing
             {
                 ParsedRoute = parsedRoute;
             }
+
+            System.Diagnostics.Trace.WriteLine(string.Format("RouteTemplate:{0},HttpMessageHandler:{1}", this.RouteTemplate,this.Handler));
+
         }
 
         public IDictionary<string, object> Defaults

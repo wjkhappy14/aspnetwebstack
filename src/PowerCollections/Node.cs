@@ -15,6 +15,11 @@ namespace Wintellect.PowerCollections
     public class Node<T>
     {
         public Node<T> Left, Right;
+
+
+        /// <summary>
+        /// 
+        /// </summary>
         public T Item;
 
         private const uint REDMASK = 0x80000000;

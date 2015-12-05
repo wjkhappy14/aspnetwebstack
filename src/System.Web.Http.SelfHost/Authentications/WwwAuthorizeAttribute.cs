@@ -15,6 +15,11 @@ namespace System.Web.Http.SelfHost.Authentications
     /// </summary>
     public class WwwAuthorizeAttribute : AuthorizeAttribute
     {
+
+
+        /// <summary>
+        /// 
+        /// </summary>
         public WwwAuthorizeAttribute()
         {
 
