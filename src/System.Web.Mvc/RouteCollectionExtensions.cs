@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 
+using MvcXmlRouting;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Contracts;
@@ -194,6 +195,51 @@ namespace System.Web.Mvc
             return route;
         }
 
+
+
+        /// <summary>
+        /// 从XML读取路由配置信息
+        /// </summary>
+        /// <param name="routes"></param>
+        /// <param name="section"></param>
+        public static void MapRoute(this RouteCollection routes, MvcRouteConfigurationSection section)
+        {
+            // Manipulate the Ignore List
+            foreach (IgnoreItem ignoreItem in section.Ignore)
+            {
+                RouteValueDictionary ignoreConstraints = new RouteValueDictionary();
+
+                foreach (Constraint constraint in ignoreItem.Constraints)
+                    ignoreConstraints.Add(constraint.Name, constraint.Value);
+
+                IgnoreRoute(routes, ignoreItem.Url, ignoreConstraints);
+            }
+
+            // Manipluate the Routing Table
+            foreach (RoutingItem routingItem in section.Map)
+            {
+                RouteValueDictionary defaults = new RouteValueDictionary();
+                RouteValueDictionary constraints = new RouteValueDictionary();
+
+                if (routingItem.Controller != string.Empty)
+                    defaults.Add("controller", routingItem.Controller);
+
+                if (routingItem.Action != string.Empty)
+                    defaults.Add("action", routingItem.Action);
+
+                foreach (Parameter param in routingItem.Paramaters)
+                {
+                    defaults.Add(param.Name, param.Value);
+                    if (!string.IsNullOrEmpty(param.Constraint))
+                    {
+                        constraints.Add(param.Name, param.Constraint);
+                    }
+                }
+
+                MapRoute(routes, routingItem.Name, routingItem.Url, defaults, constraints);
+            }
+        }
+
         /// <summary>
         /// The callers to this method are used at startup only, thus it's a bit better to use
         /// the uncached method because it will run faster for the first few times, and will not
@@ -223,6 +269,8 @@ namespace System.Web.Mvc
                 // fairly relaxed constraints ends up eagerly matching all generated URLs.
                 return null;
             }
+
+
         }
     }
 }

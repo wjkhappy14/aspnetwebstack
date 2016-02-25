@@ -219,8 +219,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AreaReference.cs" />
+    <Compile Include="Configs\MvcRouteConfigurationSection.cs" />
     <Compile Include="ControllerDescriptorExtensions.cs" />
     <Compile Include="Async\IAsyncActionInvokerFactory.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="CopyOnWriteDictionary.cs" />
@@ -232,6 +234,15 @@
     <Compile Include="ITempDataProviderFactory.cs" />
     <Compile Include="JQueryFormValueProvider.cs" />
     <Compile Include="JQueryFormValueProviderFactory.cs" />
+    <Compile Include="MvcXmlRouting\Constraint.cs" />
+    <Compile Include="MvcXmlRouting\ConstraintCollection.cs" />
+    <Compile Include="MvcXmlRouting\IgnoreCollection.cs" />
+    <Compile Include="MvcXmlRouting\IgnoreItem.cs" />
+    <Compile Include="MvcXmlRouting\MvcRouteConfigurationSection.cs" />
+    <Compile Include="MvcXmlRouting\Parameter.cs" />
+    <Compile Include="MvcXmlRouting\ParameterCollection.cs" />
+    <Compile Include="MvcXmlRouting\RoutingCollection.cs" />
+    <Compile Include="MvcXmlRouting\RoutingItem.cs" />
     <Compile Include="Routing\DefaultDirectRouteProvider.cs" />
     <Compile Include="Routing\IDirectRouteProvider.cs" />
     <Compile Include="SelectListGroup.cs" />
