@@ -243,6 +243,7 @@
     <Compile Include="MvcXmlRouting\ParameterCollection.cs" />
     <Compile Include="MvcXmlRouting\RoutingCollection.cs" />
     <Compile Include="MvcXmlRouting\RoutingItem.cs" />
+    <Compile Include="MyFilters\RemoveDuplicateContentAttribute.cs" />
     <Compile Include="Routing\DefaultDirectRouteProvider.cs" />
     <Compile Include="Routing\IDirectRouteProvider.cs" />
     <Compile Include="SelectListGroup.cs" />

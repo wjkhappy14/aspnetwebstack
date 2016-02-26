@@ -10,7 +10,11 @@ namespace MVCLabs.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return Json(new {
+                Now =DateTime.Now.ToString(),
+                EnvironmentVariables =Environment.GetEnvironmentVariables() },
+                JsonRequestBehavior.AllowGet
+                );
         }
 
         public ActionResult About()
