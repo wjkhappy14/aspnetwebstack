@@ -25,7 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <FileUpgradeFlags>0</FileUpgradeFlags>
     <UpgradeBackupLocation>C:\Users\SUNNY\Documents\GitHub\aspnetwebstack\Backup1\</UpgradeBackupLocation>
     <OldToolsVersion>14.0</OldToolsVersion>
     <TargetFrameworkProfile />
@@ -225,6 +225,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ThreadCultureController.cs" />
     <Compile Include="CopyOnWriteDictionary.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -244,6 +245,7 @@
     <Compile Include="MvcXmlRouting\RoutingCollection.cs" />
     <Compile Include="MvcXmlRouting\RoutingItem.cs" />
     <Compile Include="MyFilters\RemoveDuplicateContentAttribute.cs" />
+    <Compile Include="MyHttpModules\MultiCultureAwareHttpModule.cs" />
     <Compile Include="Routing\DefaultDirectRouteProvider.cs" />
     <Compile Include="Routing\IDirectRouteProvider.cs" />
     <Compile Include="SelectListGroup.cs" />

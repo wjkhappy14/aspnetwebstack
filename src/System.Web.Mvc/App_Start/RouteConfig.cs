@@ -17,9 +17,14 @@ namespace System.Web.Mvc
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { culture="zh", controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
+            //配置文化区域Url 模板
+            routes.MapRoute(
+                name: "culture",
+                url: "{culture}/{controller}/{action}/{id}",
+                defaults: new { culture="zh", controller= "ThreadCulture", action="Index",id=UrlParameter.Optional });
             ///通过XML 配置Url 模板
             MvcRouteConfigurationSection section =
           (MvcRouteConfigurationSection)ConfigurationManager.GetSection("RouteConfiguration");
