@@ -223,6 +223,7 @@
     <Compile Include="ControllerDescriptorExtensions.cs" />
     <Compile Include="Async\IAsyncActionInvokerFactory.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BTreeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ThreadCultureController.cs" />
@@ -722,6 +723,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PowerCollections\Wintellect.PowerCollections.csproj">
+      <Project>{5821977d-ac2c-4912-bcd0-6e6b1a756167}</Project>
+      <Name>Wintellect.PowerCollections</Name>
+    </ProjectReference>
     <ProjectReference Include="..\System.Web.Cors\System.Web.Cors.csproj">
       <Project>{43c1b979-d593-4a32-bb3a-4316f1c66d66}</Project>
       <Name>System.Web.Cors</Name>
