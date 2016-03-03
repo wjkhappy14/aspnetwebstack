@@ -26,7 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <FileUpgradeFlags>0</FileUpgradeFlags>
-    <UpgradeBackupLocation>C:\Users\SUNNY\Documents\GitHub\aspnetwebstack\Backup1\</UpgradeBackupLocation>
+    <UpgradeBackupLocation>C:\Users\SUNNY\Documents\GitHub\aspnetwebstack\Backup\</UpgradeBackupLocation>
     <OldToolsVersion>14.0</OldToolsVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -245,6 +245,7 @@
     <Compile Include="MvcXmlRouting\RoutingCollection.cs" />
     <Compile Include="MvcXmlRouting\RoutingItem.cs" />
     <Compile Include="MyFilters\RemoveDuplicateContentAttribute.cs" />
+    <Compile Include="MyHttpModules\ApplicationStartModuleBase .cs" />
     <Compile Include="MyHttpModules\MultiCultureAwareHttpModule.cs" />
     <Compile Include="Routing\DefaultDirectRouteProvider.cs" />
     <Compile Include="Routing\IDirectRouteProvider.cs" />

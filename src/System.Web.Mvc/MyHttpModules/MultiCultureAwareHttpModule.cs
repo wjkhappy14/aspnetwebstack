@@ -12,7 +12,7 @@ namespace System.Web.Mvc.MyHttpModules
     /// Created By: Angkor.wu
     /// Created On：2016-02-29
     /// </summary>
-    public class MultiCultureAwareHttpModule : IHttpModule
+    public class MultiCultureAwareHttpModule : IHttpModule//ApplicationStartModuleBase
     {
         private static Stopwatch stopwatch = Stopwatch.StartNew();
         private CultureInfo currentCulture;
@@ -85,6 +85,17 @@ namespace System.Web.Mvc.MyHttpModules
 
         }
 
+     //  public override void OnInit(HttpApplication context)
+     //  {
+     //      base.OnInit(context);
+     //      Debug.Write("OnInit:ApplicationStartModuleBase   ");
+     //  }
+     //
+     //  public override void OnStart(HttpApplication context)
+     //  {
+     //      Debug.Write("OnStart:ApplicationStartModuleBase   ");
+     //      base.OnStart(context);
+     //  }
         #endregion
 
         public void OnLogRequest(Object source, EventArgs e)
