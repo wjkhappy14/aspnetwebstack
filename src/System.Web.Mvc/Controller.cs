@@ -358,12 +358,16 @@ namespace System.Web.Mvc
 
         protected internal virtual JsonResult Json(object data, string contentType, Encoding contentEncoding, JsonRequestBehavior behavior)
         {
+
+            //设置Json 最大长度 和递归深度
             return new JsonResult
             {
                 Data = data,
                 ContentType = contentType,
                 ContentEncoding = contentEncoding,
-                JsonRequestBehavior = behavior
+                JsonRequestBehavior = behavior,
+                MaxJsonLength = int.MaxValue,
+                RecursionLimit = int.MaxValue
             };
         }
 
