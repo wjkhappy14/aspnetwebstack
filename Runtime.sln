@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AspNet.Facebook",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wintellect.PowerCollections", "src\PowerCollections\Wintellect.PowerCollections.csproj", "{5821977D-AC2C-4912-BCD0-6E6B1A756167}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs.CQRS", "Labs.CQRS\Labs.CQRS.csproj", "{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CodeAnalysis|Any CPU = CodeAnalysis|Any CPU
@@ -406,6 +408,20 @@ Global
 		{5821977D-AC2C-4912-BCD0-6E6B1A756167}.ReleaseSigned|Any CPU.Build.0 = ReleaseSigned|Any CPU
 		{5821977D-AC2C-4912-BCD0-6E6B1A756167}.Verbose|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
 		{5821977D-AC2C-4912-BCD0-6E6B1A756167}.Verbose|Any CPU.Build.0 = ReleaseSigned|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.CodeAnalysis|Any CPU.ActiveCfg = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.CodeAnalysis|Any CPU.Build.0 = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.Log Output|Any CPU.ActiveCfg = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.Log Output|Any CPU.Build.0 = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.Mono|Any CPU.ActiveCfg = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.Mono|Any CPU.Build.0 = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.ReleaseSigned|Any CPU.ActiveCfg = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.ReleaseSigned|Any CPU.Build.0 = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.Verbose|Any CPU.ActiveCfg = Release|Any CPU
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2}.Verbose|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -435,5 +451,6 @@ Global
 		{25DEF6F6-7F99-4EB7-91ED-5181A346AFE1} = {A9836F9E-6DB3-4D9F-ADCA-CF42D8C8BA93}
 		{821A136C-7C6F-44C6-A9E6-C39B5BFB1483} = {A9836F9E-6DB3-4D9F-ADCA-CF42D8C8BA93}
 		{5821977D-AC2C-4912-BCD0-6E6B1A756167} = {A9836F9E-6DB3-4D9F-ADCA-CF42D8C8BA93}
+		{4A18BA75-A93E-482B-ACEA-0E9B5F4DEAE2} = {A9836F9E-6DB3-4D9F-ADCA-CF42D8C8BA93}
 	EndGlobalSection
 EndGlobal

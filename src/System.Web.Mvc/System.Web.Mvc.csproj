@@ -25,8 +25,8 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <FileUpgradeFlags>40</FileUpgradeFlags>
-    <UpgradeBackupLocation>C:\Users\SUNNY\Documents\GitHub\aspnetwebstack\Backup2\</UpgradeBackupLocation>
+    <FileUpgradeFlags>0</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Users\SUNNY\Documents\GitHub\aspnetwebstack\Backup1\</UpgradeBackupLocation>
     <OldToolsVersion>14.0</OldToolsVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -225,7 +225,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BTreeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventoryController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RedBlackTreeController.cs" />
     <Compile Include="Controllers\ThreadCultureController.cs" />
     <Compile Include="CopyOnWriteDictionary.cs" />
     <Compile Include="Global.asax.cs">
@@ -236,6 +238,15 @@
     <Compile Include="ITempDataProviderFactory.cs" />
     <Compile Include="JQueryFormValueProvider.cs" />
     <Compile Include="JQueryFormValueProviderFactory.cs" />
+    <Compile Include="ModelCommands\CreateInventoryItem.cs" />
+    <Compile Include="ModelCommands\DeleteInventoryItem.cs" />
+    <Compile Include="ModelEvents\InventoryItemCreated.cs" />
+    <Compile Include="ModelEvents\InventoryItemDeactivated.cs" />
+    <Compile Include="ModelEvents\InventoryItemRenamed.cs" />
+    <Compile Include="ModelEvents\ItemsCheckedInToInventory.cs" />
+    <Compile Include="ModelEvents\ItemsDeletedFromInventory.cs" />
+    <Compile Include="Models\InventoryItem.cs" />
+    <Compile Include="Models\InventoryItemCreatedHandle.cs" />
     <Compile Include="MvcXmlRouting\Constraint.cs" />
     <Compile Include="MvcXmlRouting\ConstraintCollection.cs" />
     <Compile Include="MvcXmlRouting\IgnoreCollection.cs" />
@@ -335,6 +346,7 @@
     <Compile Include="Routing\RouteCollectionAttributeRoutingExtensions.cs" />
     <Compile Include="RoutePrefixAttribute.cs" />
     <Compile Include="Routing\RouteDataTokenKeys.cs" />
+    <Compile Include="ServiceLocator.cs" />
     <Compile Include="SessionStateAttribute.cs" />
     <Compile Include="AllowHtmlAttribute.cs" />
     <Compile Include="UnvalidatedRequestValuesAccessor.cs" />
@@ -720,9 +732,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Labs.CQRS\Labs.CQRS.csproj">
+      <Project>{4a18ba75-a93e-482b-acea-0e9b5f4deae2}</Project>
+      <Name>Labs.CQRS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PowerCollections\Wintellect.PowerCollections.csproj">
       <Project>{5821977d-ac2c-4912-bcd0-6e6b1a756167}</Project>
       <Name>Wintellect.PowerCollections</Name>
